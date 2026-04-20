@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HouseBite — Smart Household Food Management</title>
-  <meta name="description" content="HouseBite helps households track food inventory, cut waste, and manage grocery spending — together.">
+  <meta name="description" content="HouseBite is a progressive web app that helps households track food inventory, cut waste and manage grocery spending — together.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Epilogue:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
@@ -21,6 +21,7 @@
         <li><a href="#features">Features</a></li>
         <li><a href="#demo">Demo</a></li>
         <li><a href="#sprints">Sprints</a></li>
+        <li><a href="#tech">Tech</a></li>
         <li><a href="#team">Team</a></li>
       </ul>
       <a href="https://github.com/arpega75/houseBite" class="nav-cta" target="_blank" rel="noopener">GitHub →</a>
@@ -35,7 +36,7 @@
       <p class="hero-sub">Track what you buy, where it lives, when it expires — and get recipe suggestions before anything goes to waste.</p>
       <div class="hero-actions">
         <a href="#features" class="btn btn-primary">Explore features</a>
-        <a href="#team" class="btn btn-ghost">Meet the team</a>
+        <a href="#tech" class="btn btn-ghost">How it's built</a>
       </div>
     </div>
     <div class="hero-tags">
@@ -45,7 +46,7 @@
           <span class="hero-tag">Recipe suggestions</span>
           <span class="hero-tag">Shopping lists</span>
           <span class="hero-tag">Budget tracking</span>
-          <span class="hero-tag">Receipt scanning</span>
+          <span class="hero-tag">Receipt OCR</span>
           <span class="hero-tag">Household sharing</span>
           <span class="hero-tag">Dietary restrictions</span>
         </div>
@@ -59,9 +60,9 @@
       <span class="section-label">What is HouseBite?</span>
       <div class="about-content">
         <div class="about-main">
-          <p class="about-lede">A mobile app that turns your household into a smart pantry — less waste, less spending, less stress.</p>
-          <p class="about-body">You join or create a household, and HouseBite becomes your shared food manager. Add products with expiry dates, get notified before they go bad, and receive recipe suggestions that use exactly what you already have at home.</p>
-          <p class="about-body">Beyond the pantry, it tracks grocery spending, lets members scan receipts to log purchases automatically, and handles dietary restrictions per person — so no one's left out of the meal plan.</p>
+          <p class="about-lede">A progressive web app that turns your household into a shared smart pantry — less waste, less spending, less stress.</p>
+          <p class="about-body">You join or create a household, and HouseBite becomes your shared food manager. Add products with expiry dates, see what's about to go, and get recipe suggestions that use exactly what you already have at home.</p>
+          <p class="about-body">Beyond the pantry, it tracks grocery spending against a monthly budget, lets members scan receipts with on-device OCR to log purchases automatically, and handles dietary restrictions per person — so no one is left out of the meal plan.</p>
         </div>
         <div class="about-aside">
           <div class="about-stat">
@@ -78,87 +79,87 @@
   </section>
 
   <!-- FEATURES -->
-  <section class="features" id="features">
-    <div class="features-inner">
-      <div class="features-header">
-        <span class="section-label">What it does</span>
-        <h2 class="section-title">Built for real households</h2>
-      </div>
-      <div class="features-grid">
-
-        <div class="feature feature--large">
-          <div class="feature-icon">⏰</div>
-          <h3>Expiry tracking &amp; recipe suggestions</h3>
-          <p>Every product is stored with its expiry date. When something is about to expire, HouseBite surfaces recipes that use it — so you cook it before you lose it.</p>
-        </div>
-
-        <div class="feature feature--a">
-          <div class="feature-icon">🛒</div>
-          <h3>Shared shopping list</h3>
-          <p>All household members share one grocery list. Add items, tick them off at the store — synced in real time.</p>
-        </div>
-
-        <div class="feature feature--a">
-          <div class="feature-icon">📄</div>
-          <h3>Receipt scanning</h3>
-          <p>Photograph a grocery receipt and HouseBite logs the items and total cost automatically. No manual entry.</p>
-        </div>
-
-        <div class="feature feature--wide">
-          <div class="feature-icon">💰</div>
-          <h3>Budget tracking</h3>
-          <p>Set a monthly grocery budget and watch spending in real time — by member, by category, or for the whole household at once.</p>
-        </div>
-
-        <div class="feature feature--b">
-          <div class="feature-icon">🏠</div>
-          <h3>Household management</h3>
-          <p>Create a household and invite others via a unique code or link. Everyone sees the same pantry.</p>
-        </div>
-
-        <div class="feature feature--b">
-          <div class="feature-icon">🚫</div>
-          <h3>Dietary restrictions</h3>
-          <p>Set allergies and intolerances per member. HouseBite flags restricted ingredients in recipes and shopping suggestions.</p>
-        </div>
-
-      </div>
+<section class="features" id="features">
+  <div class="features-inner">
+    <div class="features-header">
+      <span class="section-label">What it does</span>
+      <h2 class="section-title">Built for real households</h2>
     </div>
-  </section>
+    <div class="features-grid">
+
+      <div class="feature feature--large">
+        <div class="feature-icon">⏰</div>
+        <h3>Expiry tracking &amp; recipe suggestions</h3>
+        <p>See what's about to expire and get recipe ideas that use it — tailored to everyone's dietary needs.</p>
+      </div>
+
+      <div class="feature feature--a">
+        <div class="feature-icon">🛒</div>
+        <h3>Shared shopping list</h3>
+        <p>One grocery list for the whole household, synced in real time.</p>
+      </div>
+
+      <div class="feature feature--a">
+        <div class="feature-icon">📄</div>
+        <h3>Receipt scanning</h3>
+        <p>Snap a photo of your receipt — items and total are logged automatically.</p>
+      </div>
+
+      <div class="feature feature--wide">
+        <div class="feature-icon">💰</div>
+        <h3>Budget tracking</h3>
+        <p>Set a monthly budget and watch spending add up as receipts come in.</p>
+      </div>
+
+      <div class="feature feature--b">
+        <div class="feature-icon">🏠</div>
+        <h3>Household management</h3>
+        <p>Create a household and invite others with a short code. Everyone sees the same pantry and lists.</p>
+      </div>
+
+      <div class="feature feature--b">
+        <div class="feature-icon">🥗</div>
+        <h3>Dietary restrictions</h3>
+        <p>Per-person diets and allergies — recipes skip anything restricted.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- DEMO / SCREENSHOTS -->
   <section class="demo" id="demo">
     <div class="demo-inner">
       <span class="section-label">Interface</span>
       <h2 class="section-title">See it in action</h2>
-      <p class="section-sub">A first look at the HouseBite mobile interface.</p>
+      <p class="section-sub">Installable on any device — a first look at the HouseBite interface.</p>
       <div class="phone-row">
         <div class="phone-frame">
           <div class="phone-notch"></div>
           <div class="phone-screen">
-            <!-- Replace with: <img src="screenshots/pantry.png" alt="Pantry view"> -->
-            <span class="phone-label">Pantry View</span>
+            <!-- Replace with: <img src="screenshots/dashboard.png" alt="Household dashboard"> -->
+            <span class="phone-label">Household Dashboard</span>
           </div>
         </div>
         <div class="phone-frame phone-frame--center">
           <div class="phone-notch"></div>
           <div class="phone-screen">
             <!-- Replace with: <img src="screenshots/recipes.png" alt="Recipe suggestions"> -->
-            <span class="phone-label">Recipe Suggestions</span>
+            <span class="phone-label">Recipe Search</span>
           </div>
         </div>
         <div class="phone-frame">
           <div class="phone-notch"></div>
           <div class="phone-screen">
-            <!-- Replace with: <img src="screenshots/shopping.png" alt="Shopping list"> -->
-            <span class="phone-label">Shopping List</span>
+            <!-- Replace with: <img src="screenshots/scan.png" alt="Receipt scan"> -->
+            <span class="phone-label">Receipt Scan</span>
           </div>
         </div>
         <div class="phone-frame">
           <div class="phone-notch"></div>
           <div class="phone-screen">
-            <!-- Replace with: <img src="screenshots/budget.png" alt="Budget overview"> -->
-            <span class="phone-label">Budget Overview</span>
+            <!-- Replace with: <img src="screenshots/account.png" alt="Dietary profile"> -->
+            <span class="phone-label">Dietary Profile</span>
           </div>
         </div>
       </div>
@@ -178,12 +179,12 @@
             <span class="sprint-badge">Completed</span>
           </div>
           <h3 class="sprint-name">Foundation</h3>
-          <p class="sprint-desc">Initial project setup, user authentication, and the core household model.</p>
+          <p class="sprint-desc">Project scaffolding, authentication, and the shared household model that everything else sits on top of.</p>
           <ul class="sprint-items">
-            <li>Project architecture &amp; tech stack selection</li>
-            <li>User registration &amp; authentication</li>
-            <li>Household creation &amp; member invites via code</li>
-            <li>Basic pantry product add / remove</li>
+            <li>Project setup — Vite + React + TypeScript, Docker dev environment</li>
+            <li>Supabase Auth with automatic family_member trigger on sign-up</li>
+            <li>Households: create, join via invite code, member allocations</li>
+            <li>Database schema across 12 tables with Row Level Security</li>
           </ul>
         </div>
 
@@ -192,16 +193,86 @@
             <span class="sprint-num">Sprint 2</span>
             <span class="sprint-badge sprint-badge--active">In progress</span>
           </div>
-          <h3 class="sprint-name">Core features</h3>
-          <p class="sprint-desc">Building the key functionality that makes HouseBite useful day-to-day.</p>
+          <h3 class="sprint-name">Core experience</h3>
+          <p class="sprint-desc">Building out the features that make HouseBite useful day-to-day — what lands in the hands of the user.</p>
           <ul class="sprint-items">
-            <li>Expiry date tracking &amp; push notifications</li>
-            <li>Recipe suggestion engine</li>
-            <li>Shared shopping list with real-time sync</li>
-            <li>Dietary restriction profiles per member</li>
+            <li>Household dashboard with filterable &ldquo;expiring soon&rdquo; view</li>
+            <li>Recipe suggestions via Spoonacular — diet and intolerance aware</li>
+            <li>Receipt scanning with on-device OCR (Tesseract.js)</li>
+            <li>Account page: dietary restriction profiles per member</li>
           </ul>
         </div>
 
+        <div class="sprint sprint--upcoming">
+          <div class="sprint-meta">
+            <span class="sprint-num">Sprint 3</span>
+            <span class="sprint-badge sprint-badge--upcoming">Upcoming</span>
+          </div>
+          <h3 class="sprint-name">To be scoped</h3>
+          <p class="sprint-desc">Under Scrum, sprint scope is decided at the start of each sprint from the product backlog — so this one's not planned yet.</p>
+        </div>
+
+        <div class="sprint sprint--upcoming">
+          <div class="sprint-meta">
+            <span class="sprint-num">Sprint 4</span>
+            <span class="sprint-badge sprint-badge--upcoming">Upcoming</span>
+          </div>
+          <h3 class="sprint-name">To be scoped</h3>
+          <p class="sprint-desc">Final sprint — scope will be shaped by what we ship, learn and prioritise across sprints 2 and 3.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH / ARCHITECTURE -->
+  <section class="tech" id="tech">
+    <div class="tech-inner">
+      <span class="section-label">Under the hood</span>
+      <h2 class="section-title">Tech &amp; architecture</h2>
+      <p class="section-sub">HouseBite is a progressive web app — installable on phones and desktops, with a Supabase backend and on-device processing where it matters.</p>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h3>Frontend</h3>
+          <ul>
+            <li>React 19 + TypeScript</li>
+            <li>Vite + React Compiler</li>
+            <li>Mantine UI + Tabler Icons</li>
+            <li>React Router 7</li>
+            <li>PWA manifest + icons</li>
+          </ul>
+        </div>
+
+        <div class="tech-card">
+          <h3>Backend &amp; data</h3>
+          <ul>
+            <li>Supabase Auth</li>
+            <li>PostgreSQL with Row Level Security</li>
+            <li>Edge Functions (Deno)</li>
+            <li>SECURITY DEFINER RPCs</li>
+            <li>12 tables, 1 derived view</li>
+          </ul>
+        </div>
+
+        <div class="tech-card">
+          <h3>Integrations</h3>
+          <ul>
+            <li>Spoonacular — recipe search</li>
+            <li>Tesseract.js — on-device OCR</li>
+            <li>Open Food Facts — barcode data</li>
+          </ul>
+        </div>
+
+        <div class="tech-card">
+          <h3>Workflow</h3>
+          <ul>
+            <li>Scrum methodology</li>
+            <li>Sprint-based delivery</li>
+            <li>KTH GitLab + GitHub dual remote</li>
+            <li>Docker for local dev</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -216,23 +287,23 @@
          <div class="team-member">
           <p class="member-name">Arnau Pelechano García</p>
           <p class="member-role">Developer</p>
-          <a href="mailto:your@email.com" class="member-email">arnaupg@kth.se</a>
+          <a href="mailto:arnaupg@kth.se" class="member-email">arnaupg@kth.se</a>
         </div>
         <div class="team-member">
           <p class="member-name">Sana Monhaseri</p>
           <p class="member-role">Developer</p>
-          <a href="mailto:your@email.com" class="member-email">s.monhaserii@gmail.com</a>
+          <a href="mailto:s.monhaserii@gmail.com" class="member-email">s.monhaserii@gmail.com</a>
         </div>
         <div class="team-member">
           <p class="member-name">Panayiotis Charalambous</p>
           <p class="member-role">Developer</p>
-          <a href="mailto:your@email.com" class="member-email">charalam@kth.se</a>
+          <a href="mailto:charalam@kth.se" class="member-email">charalam@kth.se</a>
         </div>
         <div class="team-member">
           <p class="member-name">Samia Serbouti</p>
           <p class="member-role">Product Developer</p>
           <p class="member-role">Developer</p>
-          <a href="mailto:your@email.com" class="member-email">sa.serbouti@protonmail.com</a>
+          <a href="mailto:sa.serbouti@protonmail.com" class="member-email">sa.serbouti@protonmail.com</a>
         </div>
         <div class="team-member">
           <p class="member-name">David Turesson</p>
@@ -248,7 +319,7 @@
           <p class="member-name">Beyza Baykan</p>
           <p class="member-role">Scrum Master</p>
           <p class="member-role">Developer</p>
-          <a href="mailto:your@email.com" class="member-email">baykan@kth.se</a>
+          <a href="mailto:baykan@kth.se" class="member-email">baykan@kth.se</a>
         </div>
       </div>
       <p class="contact-note">Questions about the project? Reach out to any team member above — we're happy to talk.</p>
@@ -261,7 +332,7 @@
       <p class="footer-logo">HouseBite</p>
       <p class="footer-tagline">Smarter households. Less waste.</p>
       <a href="https://github.com/arpega75/houseBite" class="btn btn-primary" target="_blank" rel="noopener">View source on GitHub →</a>
-      <p class="footer-course">PICT Course · KTH Royal Institute of Technology · 2026</p>
+      <p class="footer-course">II1305 · KTH Royal Institute of Technology · 2026</p>
     </div>
   </footer>
 
