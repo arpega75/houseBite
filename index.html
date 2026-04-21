@@ -24,8 +24,21 @@
         <li><a href="#tech">Tech</a></li>
         <li><a href="#team">Team</a></li>
       </ul>
-      <a href="https://github.com/arpega75/houseBite" class="nav-cta" target="_blank" rel="noopener">GitHub →</a>
+      <a class="nav-cta nav-cta--soon" title="Coming soon" aria-disabled="true">Open app →</a>
+      <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <nav class="nav-mobile" id="nav-mobile" aria-hidden="true">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#sprints">Sprints</a></li>
+        <li><a href="#tech">Tech</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+    </nav>
   </nav>
 
   <!-- HERO -->
@@ -33,7 +46,7 @@
     <div class="hero-inner">
       <p class="hero-eyebrow">II1305 · KTH Royal Institute of Technology · 2026</p>
       <h1 class="hero-title">Your household,<br>smarter.</h1>
-      <p class="hero-sub">Track what you buy, where it lives, when it expires — and get recipe suggestions before anything goes to waste.</p>
+      <p class="hero-sub">Track what you buy, where is stored, when it expires — and get recipe suggestions before anything goes to waste.</p>
       <div class="hero-actions">
         <a href="#features" class="btn btn-primary">Explore features</a>
         <a href="#tech" class="btn btn-ghost">How it's built</a>
@@ -57,14 +70,14 @@
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="about-inner">
-      <span class="section-label">What is HouseBite?</span>
+      <span class="section-label" data-reveal>What is HouseBite?</span>
       <div class="about-content">
-        <div class="about-main">
-          <p class="about-lede">A progressive web app that turns your household into a shared smart pantry — less waste, less spending, less stress.</p>
-          <p class="about-body">You join or create a household, and HouseBite becomes your shared food manager. Add products with expiry dates, see what's about to go, and get recipe suggestions that use exactly what you already have at home.</p>
+        <div class="about-main" data-reveal>
+          <p class="about-lede">A web app that turns your household into a shared smart pantry — less waste, less spending, less stress.</p>
+          <p class="about-body">You join or create a household, and HouseBite becomes your shared food manager. Add products with expiry dates, see what's about to expire, and get recipe suggestions that use exactly what you already have at home.</p>
           <p class="about-body">Beyond the pantry, it tracks grocery spending against a monthly budget, lets members scan receipts with on-device OCR to log purchases automatically, and handles dietary restrictions per person — so no one is left out of the meal plan.</p>
         </div>
-        <div class="about-aside">
+        <div class="about-aside" data-reveal data-delay="1">
           <div class="about-stat">
             <span class="stat-number">30–40%</span>
             <span class="stat-label">of food bought in Europe is wasted at household level</span>
@@ -81,43 +94,43 @@
   <!-- FEATURES -->
 <section class="features" id="features">
   <div class="features-inner">
-    <div class="features-header">
+    <div class="features-header" data-reveal>
       <span class="section-label">What it does</span>
       <h2 class="section-title">Built for real households</h2>
     </div>
     <div class="features-grid">
 
-      <div class="feature feature--large">
+      <div class="feature feature--large" data-reveal>
         <div class="feature-icon">⏰</div>
         <h3>Expiry tracking &amp; recipe suggestions</h3>
         <p>See what's about to expire and get recipe ideas that use it — tailored to everyone's dietary needs.</p>
       </div>
 
-      <div class="feature feature--a">
+      <div class="feature feature--a" data-reveal data-delay="1">
         <div class="feature-icon">🛒</div>
         <h3>Shared shopping list</h3>
         <p>One grocery list for the whole household, synced in real time.</p>
       </div>
 
-      <div class="feature feature--a">
+      <div class="feature feature--a" data-reveal data-delay="2">
         <div class="feature-icon">📄</div>
         <h3>Receipt scanning</h3>
         <p>Snap a photo of your receipt — items and total are logged automatically.</p>
       </div>
 
-      <div class="feature feature--wide">
+      <div class="feature feature--wide" data-reveal>
         <div class="feature-icon">💰</div>
         <h3>Budget tracking</h3>
         <p>Set a monthly budget and watch spending add up as receipts come in.</p>
       </div>
 
-      <div class="feature feature--b">
+      <div class="feature feature--b" data-reveal data-delay="1">
         <div class="feature-icon">🏠</div>
         <h3>Household management</h3>
-        <p>Create a household and invite others with a short code. Everyone sees the same pantry and lists.</p>
+        <p>Create a household and invite others with a link. Everyone sees the same pantry and lists.</p>
       </div>
 
-      <div class="feature feature--b">
+      <div class="feature feature--b" data-reveal data-delay="2">
         <div class="feature-icon">🥗</div>
         <h3>Dietary restrictions</h3>
         <p>Per-person diets and allergies — recipes skip anything restricted.</p>
@@ -169,11 +182,11 @@
   <!-- SPRINTS -->
   <section class="sprints" id="sprints">
     <div class="sprints-inner">
-      <span class="section-label">Development progress</span>
-      <h2 class="section-title">Sprint overview</h2>
+      <span class="section-label" data-reveal>Development progress</span>
+      <h2 class="section-title" data-reveal>Sprint overview</h2>
       <div class="sprint-list">
 
-        <div class="sprint sprint--done">
+        <div class="sprint sprint--done" data-reveal>
           <div class="sprint-meta">
             <span class="sprint-num">Sprint 1</span>
             <span class="sprint-badge">Completed</span>
@@ -188,7 +201,7 @@
           </ul>
         </div>
 
-        <div class="sprint sprint--active">
+        <div class="sprint sprint--active" data-reveal data-delay="1">
           <div class="sprint-meta">
             <span class="sprint-num">Sprint 2</span>
             <span class="sprint-badge sprint-badge--active">In progress</span>
@@ -203,7 +216,7 @@
           </ul>
         </div>
 
-        <div class="sprint sprint--upcoming">
+        <div class="sprint sprint--upcoming" data-reveal>
           <div class="sprint-meta">
             <span class="sprint-num">Sprint 3</span>
             <span class="sprint-badge sprint-badge--upcoming">Upcoming</span>
@@ -212,7 +225,7 @@
           <p class="sprint-desc">Under Scrum, sprint scope is decided at the start of each sprint from the product backlog — so this one's not planned yet.</p>
         </div>
 
-        <div class="sprint sprint--upcoming">
+        <div class="sprint sprint--upcoming" data-reveal data-delay="1">
           <div class="sprint-meta">
             <span class="sprint-num">Sprint 4</span>
             <span class="sprint-badge sprint-badge--upcoming">Upcoming</span>
@@ -228,12 +241,12 @@
   <!-- TECH / ARCHITECTURE -->
   <section class="tech" id="tech">
     <div class="tech-inner">
-      <span class="section-label">Under the hood</span>
-      <h2 class="section-title">Tech &amp; architecture</h2>
-      <p class="section-sub">HouseBite is a progressive web app — installable on phones and desktops, with a Supabase backend and on-device processing where it matters.</p>
+      <span class="section-label" data-reveal>Under the hood</span>
+      <h2 class="section-title" data-reveal>Tech &amp; architecture</h2>
+      <p class="section-sub" data-reveal>HouseBite is a progressive web app — installable on phones and desktops, with a Supabase backend and on-device processing where it matters.</p>
 
       <div class="tech-grid">
-        <div class="tech-card">
+        <div class="tech-card" data-reveal>
           <h3>Frontend</h3>
           <ul>
             <li>React 19 + TypeScript</li>
@@ -244,7 +257,7 @@
           </ul>
         </div>
 
-        <div class="tech-card">
+        <div class="tech-card" data-reveal data-delay="1">
           <h3>Backend &amp; data</h3>
           <ul>
             <li>Supabase Auth</li>
@@ -255,7 +268,7 @@
           </ul>
         </div>
 
-        <div class="tech-card">
+        <div class="tech-card" data-reveal data-delay="2">
           <h3>Integrations</h3>
           <ul>
             <li>Spoonacular — recipe search</li>
@@ -264,7 +277,7 @@
           </ul>
         </div>
 
-        <div class="tech-card">
+        <div class="tech-card" data-reveal data-delay="3">
           <h3>Workflow</h3>
           <ul>
             <li>Scrum methodology</li>
@@ -280,42 +293,42 @@
   <!-- TEAM -->
   <section class="team" id="team">
     <div class="team-inner">
-      <span class="section-label">The people behind it</span>
-      <h2 class="section-title">Meet the team</h2>
+      <span class="section-label" data-reveal>The people behind it</span>
+      <h2 class="section-title" data-reveal>Meet the team</h2>
       <div class="team-grid">
         <!-- Replace placeholder names/roles/emails with your actual info -->
-         <div class="team-member">
+         <div class="team-member" data-reveal>
           <p class="member-name">Arnau Pelechano García</p>
           <p class="member-role">Developer</p>
           <a href="mailto:arnaupg@kth.se" class="member-email">arnaupg@kth.se</a>
         </div>
-        <div class="team-member">
+        <div class="team-member" data-reveal data-delay="1">
           <p class="member-name">Sana Monhaseri</p>
           <p class="member-role">Developer</p>
           <a href="mailto:s.monhaserii@gmail.com" class="member-email">s.monhaserii@gmail.com</a>
         </div>
-        <div class="team-member">
+        <div class="team-member" data-reveal data-delay="2">
           <p class="member-name">Panayiotis Charalambous</p>
           <p class="member-role">Developer</p>
           <a href="mailto:charalam@kth.se" class="member-email">charalam@kth.se</a>
         </div>
-        <div class="team-member">
+        <div class="team-member" data-reveal data-delay="1">
           <p class="member-name">Samia (Sam) Serbouti</p>
           <p class="member-role">Product Owner</p>
           <p class="member-role">Developer</p>
           <a href="mailto:sa.serbouti@protonmail.com" class="member-email">serbouti@kth.se</a>
         </div>
-        <div class="team-member">
+        <div class="team-member" data-reveal data-delay="2">
           <p class="member-name">David Turesson</p>
           <p class="member-role">Developer</p>
           <a href="mailto:your@email.com" class="member-email">your@email.com</a>
         </div>
-        <div class="team-member">
+        <div class="team-member" data-reveal data-delay="1">
           <p class="member-name">David Gonçalves Bermúdez</p>
           <p class="member-role">Developer</p>
           <a href="mailto:your@email.com" class="member-email">your@email.com</a>
         </div>
-        <div class="team-member">
+        <div class="team-member" data-reveal data-delay="2">
           <p class="member-name">Beyza Baykan</p>
           <p class="member-role">Scrum Master</p>
           <p class="member-role">Developer</p>
@@ -331,16 +344,72 @@
     <div class="footer-inner">
       <p class="footer-logo">HouseBite</p>
       <p class="footer-tagline">Smarter households. Less waste.</p>
-      <a href="https://github.com/arpega75/houseBite" class="btn btn-primary" target="_blank" rel="noopener">View source on GitHub →</a>
+      <a class="btn btn-primary btn--soon" title="Coming soon" aria-disabled="true">Open app →</a>
       <p class="footer-course">II1305 · KTH Royal Institute of Technology · 2026</p>
     </div>
   </footer>
 
   <script>
+    // Hero title letter-by-letter reveal
+    (function () {
+      const el = document.querySelector('.hero-title');
+      const nodes = [...el.childNodes];
+      el.innerHTML = '';
+      let i = 0;
+      const base = 0.45, step = 0.04;
+      nodes.forEach(node => {
+        if (node.nodeType === 3) {
+          [...node.textContent].forEach(char => {
+            const span = document.createElement('span');
+            span.className = 'hero-letter';
+            span.textContent = char === ' ' ? ' ' : char;
+            span.style.animationDelay = (base + i * step) + 's';
+            el.appendChild(span);
+            i++;
+          });
+        } else if (node.nodeName === 'BR') {
+          el.appendChild(document.createElement('br'));
+        }
+      });
+    })();
+
+    // Nav scroll state
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('nav--scrolled', window.scrollY > 50);
     }, { passive: true });
+
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+
+    // Hamburger menu
+    const burger = document.getElementById('nav-burger');
+    const mobileMenu = document.getElementById('nav-mobile');
+
+    burger.addEventListener('click', () => {
+      const isOpen = burger.classList.toggle('is-open');
+      mobileMenu.classList.toggle('is-open', isOpen);
+      burger.setAttribute('aria-expanded', isOpen);
+      mobileMenu.setAttribute('aria-hidden', !isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('is-open');
+        mobileMenu.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+      });
+    });
   </script>
 
 </body>
