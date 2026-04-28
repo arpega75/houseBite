@@ -51,6 +51,7 @@
       <div class="hero-actions">
         <a href="#features" class="btn btn-primary">Explore features</a>
         <a href="#tech" class="btn btn-ghost">How it is built</a>
+        <button type="button" class="btn btn-primary hero-mobile-cta hero-mobile-cta--active">Open app →</button>
       </div>
     </div>
     <div class="hero-tags">
@@ -358,6 +359,8 @@
     // Hero title letter-by-letter reveal
     (function () {
       const el = document.querySelector('.hero-title');
+      const isSmallScreen = window.matchMedia('(max-width: 600px)').matches;
+      if (isSmallScreen) return;
       const nodes = [...el.childNodes];
       el.innerHTML = '';
       let i = 0;
