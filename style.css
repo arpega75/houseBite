@@ -661,9 +661,18 @@ body {
   padding: var(--sp-12);
   border-radius: var(--r-xl);
   background: var(--cream);
+  border: 1px solid transparent;
 }
 
-.sprint--active { background: var(--forest); }
+.sprint--done {
+  border-color: var(--border);
+  box-shadow: 0 10px 24px oklch(22% 0.03 82 / 0.04);
+}
+
+.sprint--active {
+  background: var(--forest);
+  box-shadow: 0 24px 42px oklch(18% 0.05 155 / 0.18);
+}
 
 /* Upcoming sprints — muted, outlined, no items list */
 .sprint--upcoming {
@@ -698,6 +707,12 @@ body {
   border-radius: var(--r-pill);
   background: oklch(90% 0.03 155);
   color: var(--forest);
+}
+
+.sprint--done .sprint-badge {
+  background: oklch(93% 0.02 155);
+  color: oklch(36% 0.07 155);
+  border: 1px solid oklch(84% 0.03 155);
 }
 
 .sprint-badge--active {
