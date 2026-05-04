@@ -258,8 +258,7 @@ body {
     top: calc(100% - 6px);
     left: var(--sp-8);
     right: var(--sp-8);
-    display: grid;
-    grid-template-rows: 0fr;
+    display: block;
     background: rgb(11 61 36 / 0.98);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
@@ -269,9 +268,12 @@ body {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+    max-height: 0;
+    overflow: hidden;
     transition:
       transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
       opacity 0.2s ease,
+      max-height 0.24s cubic-bezier(0.16, 1, 0.3, 1),
       visibility 0s linear 0.24s;
     transform: translateY(-10px);
   }
@@ -280,19 +282,20 @@ body {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
+    max-height: 24rem;
     transition:
       transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
       opacity 0.2s ease,
+      max-height 0.24s cubic-bezier(0.16, 1, 0.3, 1),
       visibility 0s linear 0s;
     transform: translateY(0);
   }
 
   .nav-mobile > ul {
-    overflow: clip;
     display: flex;
     flex-direction: column;
     gap: 0;
-    padding: 0;
+    padding: 0 var(--sp-6);
     align-items: flex-end;
     text-align: right;
   }
@@ -373,6 +376,7 @@ body {
   letter-spacing: -0.035em;
   margin-bottom: var(--sp-8);
   max-width: 14ch;
+  text-wrap: balance;
   animation: none;
 }
 
@@ -1066,20 +1070,20 @@ body {
     margin-bottom: var(--sp-6);
     max-width: none;
     line-height: 1.4;
-    white-space: nowrap;
+    white-space: normal;
   }
   .hero-title {
-    font-size: clamp(2.62rem, 12.4vw, 3.9rem);
-    line-height: 0.9;
+    font-size: clamp(2.45rem, 11.6vw, 3.5rem);
+    line-height: 0.96;
     letter-spacing: -0.035em;
-    max-width: 9.6ch;
-    white-space: nowrap;
+    max-width: 10.5ch;
+    white-space: normal;
     margin-bottom: var(--sp-6);
   }
   .hero-sub {
     font-size: 0.95rem;
-    line-height: 1.7;
-    max-width: 36ch;
+    line-height: 1.6;
+    max-width: 100%;
     margin-bottom: var(--sp-10);
   }
   .hero-actions {
