@@ -1053,6 +1053,10 @@ body {
 .team-inner { max-width: var(--max-w); margin: 0 auto; }
 .team-inner .section-title { margin-bottom: var(--sp-4); }
 .team-inner .section-sub { max-width: 68ch; margin-bottom: var(--sp-12); }
+.team-inner .section-sub strong {
+  color: var(--forest);
+  font-weight: 600;
+}
 
 .team-grid {
   display: grid;
