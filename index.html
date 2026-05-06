@@ -48,7 +48,7 @@
     <div class="hero-inner">
       <p class="hero-eyebrow">II1305 · KTH Royal Institute of Technology · 2026</p>
       <h1 class="hero-title">Manage and track<br>your virtual pantry.</h1>
-      <p class="hero-sub">Track what you buy, and when it expires. Get recipe suggestions before anything goes to waste.</p>
+      <p class="hero-sub">Track what you buy, and when it expires.<br>Get recipe suggestions before anything goes to waste.</p>
       <div class="hero-actions">
         <a href="#features" class="btn btn-primary">Explore features</a>
         <a href="#tech" class="btn btn-ghost">How it is built</a>
@@ -59,10 +59,10 @@
       <div class="hero-inner">
         <div class="hero-tag-row">
           <span class="hero-tag">Expiry tracking</span>
-          <span class="hero-tag">Recipe suggestions</span>
-          <span class="hero-tag">Shopping lists</span>
+          <span class="hero-tag">Recipe suggestion</span>
+          <span class="hero-tag">Shopping list</span>
           <span class="hero-tag">Budget tracking</span>
-          <span class="hero-tag">Receipt Scanning</span>
+          <span class="hero-tag">Receipt scanning</span>
           <span class="hero-tag">Household sharing</span>
           <span class="hero-tag">Dietary restrictions</span>
         </div>
@@ -121,8 +121,8 @@
 
       <div class="feature feature--a" data-reveal data-delay="2">
         <div class="feature-icon" aria-hidden="true"><i class="ti ti-receipt-2"></i></div>
-        <h3>Receipt scanning &amp; export</h3>
-        <p>Snap a photo of your receipt, filter your receipt, and keep track of the receipt history</p>
+        <h3>Receipt scanning</h3>
+        <p>Snap a photo of your receipt, filter your receipt, and keep track of the receipt history.</p>
       </div>
 
       <div class="feature feature--wide" data-reveal>
@@ -134,7 +134,7 @@
       <div class="feature feature--b" data-reveal data-delay="1">
         <div class="feature-icon" aria-hidden="true"><i class="ti ti-home-2"></i></div>
         <h3>Household management</h3>
-        <p>Create a household, assign admin roles, and personalize each home with user-chosen colours so everyone stays in sync in a shared space.</p>
+        <p>Create a household, assign admin roles, and personalize each home with user-chosen avatars so everyone stays in sync in a shared space.</p>
       </div>
 
       <div class="feature feature--b" data-reveal data-delay="2">
@@ -199,12 +199,11 @@
             <span class="sprint-badge">Completed</span>
           </div>
           <h3 class="sprint-name">Project Foundation</h3>
-          <p class="sprint-desc">Core project setup, authentication, and the shared household model that the rest of the app builds on.</p>
+          <p class="sprint-desc">Core project setup.</p>
           <ul class="sprint-items">
-            <li>Project setup — Vite + React + TypeScript, Docker dev environment</li>
-            <li>Supabase Auth with automatic family_member trigger on sign-up</li>
+            <li>Core frontend and backend implementation </li>
+            <li>Share household model that the rest of the app builds on</li>
             <li>Households: create, join via invite code, member allocations</li>
-            <li>Database schema across 12 tables with Row Level Security</li>
           </ul>
         </div>
 
@@ -217,7 +216,7 @@
           <p class="sprint-desc">Focused on delivering the core user-facing features that define the everyday HouseBite experience.</p>
           <ul class="sprint-items">
             <li>Household dashboard with a filterable &ldquo;expiring soon&rdquo; view</li>
-            <li>Recipe suggestions powered by Spoonacular, with support for diets and intolerances</li>
+            <li>Recipe suggestions, with support for diets and intolerances</li>
             <li>Receipt scanning</li>
             <li>Account page with dietary restriction profiles for each member</li>
           </ul>
@@ -229,22 +228,21 @@
             <span class="sprint-badge">Completed</span>
           </div>
           <h3 class="sprint-name">Product Identity &amp; Robustness</h3>
-          <p class="sprint-desc">Focused on improving the product identity, hardening the app against misuse, and refining key household and receipt workflows.</p>
+          <p class="sprint-desc">Focused on improving the product identity and refining key household and receipt workflows.</p>
           <ul class="sprint-items">
             <li>Visual identity refresh with a custom logo</li>
-            <li>Stricter user limits to make the app cleaner and more robust</li>
             <li>Finished shopping list flow and admin roles per household</li>
             <li>Email verification, household colours, and receipt export to Excel</li>
           </ul>
         </div>
 
-        <div class="sprint sprint--active" data-reveal data-delay="1">
+        <div class="sprint sprint--done" data-reveal data-delay="1">
           <div class="sprint-meta">
             <span class="sprint-num">Sprint 4</span>
-            <span class="sprint-badge sprint-badge--active">In progress</span>
+            <span class="sprint-badge">Completed</span>
           </div>
           <h3 class="sprint-name">Final sprint</h3>
-          <p class="sprint-desc">The last sprint will build on the stronger product foundation from the first three sprints and focus on the highest-value final improvements.</p>
+          <p class="sprint-desc">The last sprint built on the stronger product foundation from the first three sprints and focused on the highest-value final improvements.</p>
         </div>
 
       </div>
@@ -256,17 +254,16 @@
     <div class="tech-inner">
       <span class="section-label" data-reveal>Under the hood</span>
       <h2 class="section-title" data-reveal>Tech &amp; architecture</h2>
-      <p class="section-sub" data-reveal>HouseBite is a progressive web app — installable on phones and desktops, with a Supabase backend and on-device processing where it matters.</p>
+      <p class="section-sub" data-reveal>HouseBite is a progressive web app — installable on phones and desktops, with a Supabase backend.</p>
 
       <div class="tech-grid">
         <div class="tech-card" data-reveal>
           <h3>Frontend</h3>
           <ul>
-            <li>React 19 + TypeScript</li>
-            <li>Vite + React Compiler</li>
+            <li>React + TypeScript</li>
             <li>Mantine UI + Tabler Icons</li>
-            <li>React Router 7</li>
-            <li>PWA manifest + icons</li>
+            <li>React Router</li>
+            <li>PWA manifest</li>
           </ul>
         </div>
 
@@ -275,9 +272,7 @@
           <ul>
             <li>Supabase Auth</li>
             <li>PostgreSQL with Row Level Security</li>
-            <li>Edge Functions (Deno)</li>
-            <li>SECURITY DEFINER RPCs</li>
-            <li>12 tables, 1 derived view</li>
+            <li>Edge Functions</li>
           </ul>
         </div>
 
@@ -285,8 +280,7 @@
           <h3>Integrations</h3>
           <ul>
             <li>Spoonacular — recipe search</li>
-            <li>Tesseract.js — on-device OCR</li>
-            <li>Open Food Facts — barcode data</li>
+            <li>Open AI - receipt scanning</li>
           </ul>
         </div>
 
@@ -295,7 +289,7 @@
           <ul>
             <li>Scrum methodology</li>
             <li>Sprint-based delivery</li>
-            <li>KTH GitLab + GitHub dual remote</li>
+            <li>Git version control</li>
             <li>Docker for local dev</li>
           </ul>
         </div>
@@ -308,6 +302,7 @@
     <div class="team-inner">
       <span class="section-label" data-reveal>The people behind it</span>
       <h2 class="section-title" data-reveal>Meet the team</h2>
+      <p class="section-sub" data-reveal>We are a KTH student team focused on full-stack development,<br>frontend design, and database engineering.</p>
       <div class="team-grid">
         <!-- Replace placeholder names/roles/emails with your actual info -->
          <div class="team-member" data-reveal>
@@ -356,7 +351,7 @@
   <footer class="footer" id="repo">
     <div class="footer-inner">
       <p class="footer-logo">HouseBite</p>
-      <p class="footer-tagline">Smarter households. Less waste.</p>
+      <p class="footer-tagline">Manage and track your virtual pantry.</p>
       <a href="https://housebite.app/" class="btn btn-primary" target="_blank" rel="noreferrer">Open app →</a>
       <p class="footer-course">II1305 · KTH Royal Institute of Technology · 2026</p>
     </div>
