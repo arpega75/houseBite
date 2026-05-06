@@ -154,37 +154,47 @@
       <h2 class="section-title">See it in action</h2>
       <p class="section-sub">Installable on any device — a first look at the HouseBite interface.</p>
       <div class="phone-row">
-        <div class="phone-frame">
+        <button class="phone-frame" type="button" data-lightbox-image="screenshots/dashboard.png" data-lightbox-alt="Household dashboard" aria-label="Open Household dashboard screenshot">
           <div class="phone-notch"></div>
           <div class="phone-screen">
-            <!-- Replace with: <img src="screenshots/dashboard.png" alt="Household dashboard"> -->
-            <span class="phone-label">Household Dashboard</span>
+            <img src="screenshots/dashboard.png" alt="Household dashboard">
           </div>
-        </div>
-        <div class="phone-frame phone-frame--center">
+        </button>
+        <button class="phone-frame" type="button" data-lightbox-image="screenshots/scan.png" data-lightbox-alt="Receipt scanning flow" aria-label="Open Receipt scanning flow screenshot">
           <div class="phone-notch"></div>
           <div class="phone-screen">
-            <!-- Replace with: <img src="screenshots/recipes.png" alt="Recipe suggestions"> -->
-            <span class="phone-label">Recipe Search</span>
+            <img src="screenshots/scan.png" alt="Receipt scanning flow">
           </div>
-        </div>
-        <div class="phone-frame">
+        </button>
+        <button class="phone-frame" type="button" data-lightbox-image="screenshots/recipe.png" data-lightbox-alt="Recipe suggestions" aria-label="Open Recipe suggestions screenshot">
           <div class="phone-notch"></div>
           <div class="phone-screen">
-            <!-- Replace with: <img src="screenshots/scan.png" alt="Receipt scan"> -->
-            <span class="phone-label">Receipt Scan</span>
+            <img src="screenshots/recipe.png" alt="Recipe suggestions">
           </div>
-        </div>
-        <div class="phone-frame">
+        </button>
+        <button class="phone-frame" type="button" data-lightbox-image="screenshots/budget.png" data-lightbox-alt="Household budget overview" aria-label="Open Household budget overview screenshot">
           <div class="phone-notch"></div>
           <div class="phone-screen">
-            <!-- Replace with: <img src="screenshots/account.png" alt="Dietary profile"> -->
-            <span class="phone-label">Dietary Profile</span>
+            <img src="screenshots/budget.png" alt="Household budget overview">
           </div>
-        </div>
+        </button>
+        <button class="phone-frame" type="button" data-lightbox-image="screenshots/diets.png" data-lightbox-alt="Food restrictions settings" aria-label="Open Food restrictions settings screenshot">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <img src="screenshots/diets.png" alt="Food restrictions settings">
+          </div>
+        </button>
       </div>
     </div>
   </section>
+
+  <div class="lightbox" id="screenshot-lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Screenshot preview">
+      <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close screenshot preview">Close</button>
+      <img class="lightbox-image" id="lightbox-image" src="" alt="">
+    </div>
+  </div>
 
   <!-- SPRINTS -->
   <section class="sprints" id="sprints">
@@ -461,6 +471,42 @@
         burger.setAttribute('aria-expanded', 'false');
         mobileMenu.setAttribute('aria-hidden', 'true');
       });
+    });
+
+    // Screenshot lightbox
+    const lightbox = document.getElementById('screenshot-lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxTriggers = document.querySelectorAll('[data-lightbox-image]');
+    let activeTrigger = null;
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('lightbox-open');
+      lightboxImage.src = '';
+      lightboxImage.alt = '';
+      activeTrigger?.focus();
+    };
+
+    lightboxTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        activeTrigger = trigger;
+        lightboxImage.src = trigger.dataset.lightboxImage;
+        lightboxImage.alt = trigger.dataset.lightboxAlt || '';
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('lightbox-open');
+      });
+    });
+
+    lightbox.querySelectorAll('[data-lightbox-close]').forEach(control => {
+      control.addEventListener('click', closeLightbox);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+        closeLightbox();
+      }
     });
   </script>
 
